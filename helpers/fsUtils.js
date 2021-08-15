@@ -10,7 +10,7 @@ const readFromFile = util.promisify(fs.readFile);
  *  @returns {void} Nothing
  */
 const writeToFile = (destination, content) =>
-  fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
+  fs.writeFile(destination, JSON.stringify(content, null, 2), (err) =>
     err ? console.error(err) : console.info(`\nData written to ${destination}`)
   );
 /**
@@ -31,21 +31,22 @@ const readAndAppend = (content, file) => {
   });
 };
 
-const removeFromFile = (id) => {
+// const removeFromFile = (id) => {
 
-    readFromFile("./db/db.json", "utf-8")
-    .then((data) => {
-        const stringNotes = JSON.parse(data);
-
-        const updatedNotes = stringNotes.filter((note) => note.id !== id);
-        writeToFile("./db/db.json", updatedNotes)
-    })
-    .catch((err) => console.error(err))
-}
+//     readFromFile("./db/db.json", "utf-8")
+//     .then((data) => {
+//         const parsedData = JSON.parse(data);
+//         // console.log(parsedData)
+//         const updatedNotes = parsedData.filter((note) => note.id !== id);
+//         console.log(updatedNotes)
+//         writeToFile("./db/db.json", updatedNotes)
+//     })
+//     .catch((err) => console.error(err))
+// }
 
 module.exports = { 
     readFromFile, 
     writeToFile, 
     readAndAppend,
-    removeFromFile
+    // removeFromFile
 };
