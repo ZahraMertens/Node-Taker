@@ -4,7 +4,6 @@ const {
     readFromFile,
     readAndAppend,
     writeToFile
-    // removeFromFile
  } = require("../helpers/fsUtils.js");
 
 // GET Route for retrieving all the notesRouter
@@ -33,36 +32,23 @@ notesRouter.post('/', (req, res) => {
     }
 });
 
-// Delete specidic notesRouter with id 
+// Delete Route for note with specific id
 notesRouter.delete('/:id', (req, res) => {
-    
-    console.log(req.params);
+    // console.log(req.params);
     const { id } = req.params;
+    
+    //Read file and get notes from json file
     readFromFile('./db/db.json')
     .then((data) => JSON.parse(data))
     .then((json) => {
-        // Make a new array of all tips except the one with the ID provided in the URL
-        const result = json.filter((note) => note.id !== id);
-    
+        // Make a new array of all notes except the one with the ID provided in the URL
+        const updatedNotes = json.filter((note) => note.id !== id);
         // Save that array to the filesystem
-        writeToFile('./db/db.json', result);
-    
+        writeToFile('./db/db.json', updatedNotes);
         // Respond to the DELETE request
         res.json(`Item ${id} has been deleted 🗑️`);
+        console.log(`Note  with the id of ${id} has been deleted!🗑️`)
     });
-    
-    // if(req.params){
-
-    //     removeFromFile(id)
-    //     .then(() => {
-    //         res.locals.redirect = "/notes";
-    //     })
-    //     .catch(error => {
-    //         console.log(`Error deleting user by ID: ${error.message}`);
-    //     });
-    // } else {
-    //     res.json("Can not delete note")
-    // }
 }); 
 
 module.exports = notesRouter;

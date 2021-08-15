@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
-const api = require("./routes/index.js")
+const api = require("./routes/index.js");
+const { clog } = require('./middleware/clog');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -19,10 +20,6 @@ app.get('/', (req, res) => {
 
 //Button click add notes path
 app.get('/notes', (req, res) =>
-  res.sendFile(path.join(__dirname, '/public/notes.html'))
-);
-
-app.delete('/api/notes/:id', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 

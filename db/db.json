@@ -1,1 +1,20 @@
-[]
+[
+  {
+    "id": "a0444206-4f20-4524-bd1f-c37dbea1bbe9",
+    "title": "Hello",
+    "text": "hello",
+    "status": "success"
+  },
+  {
+    "id": "c708674b-8b39-4128-81d4-27b9f280c800",
+    "title": "Ciao",
+    "text": "Ciao",
+    "status": "success"
+  },
+  {
+    "id": "f89a6fae-8fe1-4956-8499-6b17d408013d",
+    "title": "Hallo",
+    "text": "Hallo",
+    "status": "success"
+  }
+]

@@ -3,6 +3,7 @@ const util = require('util');
 
 // Promise version of fs.readFile
 const readFromFile = util.promisify(fs.readFile);
+
 /**
  *  Function to write data to the JSON file given a destination and some content
  *  @param {string} destination The file you want to write to.
@@ -11,8 +12,9 @@ const readFromFile = util.promisify(fs.readFile);
  */
 const writeToFile = (destination, content) =>
   fs.writeFile(destination, JSON.stringify(content, null, 2), (err) =>
-    err ? console.error(err) : console.info(`\nData written to ${destination}`)
-  );
+    err ? console.error(err) : console.info(`\nDatabase has been updated!`)
+);
+
 /**
  *  Function to read data from a given a file and append some content
  *  @param {object} content The content you want to append to the file.
@@ -31,22 +33,8 @@ const readAndAppend = (content, file) => {
   });
 };
 
-// const removeFromFile = (id) => {
-
-//     readFromFile("./db/db.json", "utf-8")
-//     .then((data) => {
-//         const parsedData = JSON.parse(data);
-//         // console.log(parsedData)
-//         const updatedNotes = parsedData.filter((note) => note.id !== id);
-//         console.log(updatedNotes)
-//         writeToFile("./db/db.json", updatedNotes)
-//     })
-//     .catch((err) => console.error(err))
-// }
-
 module.exports = { 
     readFromFile, 
     writeToFile, 
     readAndAppend,
-    // removeFromFile
 };
