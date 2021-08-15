@@ -13,7 +13,7 @@ notesRouter.get('/', (req, res) => {
 
 //Add note
 notesRouter.post('/', (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     const {title, text} = req.body;
     
     if(title && text){
@@ -47,7 +47,7 @@ notesRouter.delete('/:id', (req, res) => {
         writeToFile('./db/db.json', updatedNotes);
         // Respond to the DELETE request
         res.json(`Item ${id} has been deleted 🗑️`);
-        console.log(`Note  with the id of ${id} has been deleted!🗑️`)
+        console.log(`Note with the id of ${id} has been deleted!🗑️`)
     });
 }); 
 

@@ -6,6 +6,8 @@ const { clog } = require('./middleware/clog');
 const PORT = process.env.PORT || 8080;
 const app = express();
 
+//Custom middleware
+app.use(clog);
 //Body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
