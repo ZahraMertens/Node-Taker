@@ -40,7 +40,10 @@ notesRouter.delete('/:id', (req, res) => {
     const noteId = req.params.id;
     
     if(req.params){
-        removeFromFile(noteId);
+        removeFromFile(noteId)
+        .then((res) => {
+            res.locals.redirect = "/notes"
+        })
     } else {
         res.json("Can not delete note")
     }
