@@ -13,7 +13,6 @@
 1. [General Information](#general-information)
 2. [Task Description](#task-description)
 3. [Installation Instructions](#installation-instructions)
-4. [Testing Instructions](#testing-instructions)
 5. [Technologies Used](#technologies-used)
 6. [User Story](#user-story)
 7. [Actual Behaviour](#actual-behaviour)
@@ -24,12 +23,12 @@
 
 ## Task Description
 
-The App is a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. The user can clone the repository and by simply answering prompts in the terminal, a polished html page gets generated which provides position related information.
-As TDD (Test-Driven-Development) is an essentail part in web development to maintain code there are unit tests for ever part of the code.
+The Application "Note Taker" is used to write and save notes powered by express.js to save and retrieve the note data from a JSON file database. The major task to connect front-end and back-end and deploy the application on heroku.
+The back-end code is the build server with express and to conect the server with middleware, the front-end application and the database.
 
 ## Installation Instructions
 
-* 1️⃣ First the user must clone the [GitHub Repo](https://github.com/ZahraMertens/Team-Profile-Gen.git) on its computer.
+* 1️⃣ First the user must clone the [GitHub Repo](https://github.com/ZahraMertens/Node-Taker.git) on its computer.
 
 * 2️⃣ Open the repository on your device with VS Code (or any other program)
 
@@ -37,27 +36,19 @@ As TDD (Test-Driven-Development) is an essentail part in web development to main
 
 * 4️⃣ First, you MUST install the npm packages by running "npm install" in the terminal
 
-* 5️⃣ Then run "node index" in the terminal
+* 5️⃣ To un the application on your local device the user must run "npm start" in the terminal and will see a link such as "http://localhost:8080" if the user runs the link in the browser the application should run on the local host.
 
-* 6️⃣ Answer all questions in order to generate your personalized team profle webpage  
-
-* 7️⃣ When all questions are answered you will see the index.html file in the docs folder.
-
-**Note** ❗ Make sure that your the information provided is spelled correct in order to make sure that all URLs are working
-
-## Testing Instructions
-
-* When the user cloned the repository on its local device, it is essential that the user runs "npm install" to ensure that the jest package for testing is installed. When the user then runs "npm run test" in the terminal all test should pass. 
+* 6️⃣ To deploy the webpage the user must login heroku in the terminal and push the application to heroku. 
+   * [To see how to deploy with Git to heroku follow the link](https://devcenter.heroku.com/articles/git)
+   * When deployed to heroku the user can go to the repository and find a button in the top right corner to open the app
 
 ## Technologies Used
 
 * JavaScript
 
-* Node.JS 
+* Node.JS & Express.JS
 
-* TDD (Test driven development)
-
-* Npm packages: Jest & inquirer
+* Npm packages: Express, nodeman, util, uuid
 
 * FS (File System)
 
@@ -65,43 +56,42 @@ As TDD (Test-Driven-Development) is an essentail part in web development to main
 
 ## User Story
 
-AS A manager, I WANT to generate a webpage that displays my team's basic info SO THAT I have quick access to their emails and GitHub profiles
+AS A small business owner I WANT to be able to write and save notes SO THAT I can organize my thoughts and keep track of tasks I need to complete
 
 ## Actual Behaviour
 
-* WHEN I am prompted for my team members and their information THEN an HTML file is generated that displays a nicely formatted team roster based on user input
+* WHEN I open the Note Taker THEN I am presented with a landing page with a link to a notes page
 
-* WHEN I click on an email address in the HTML THEN my default email program opens and populates the TO field of the email with the address
+* WHEN I click on the link to the notes page THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
 
-* WHEN I click on the GitHub username THEN that GitHub profile opens in a new tab
+* WHEN I enter a new note title and the note’s text
+THEN a Save icon appears in the navigation at the top of the page
 
-* WHEN I start the application THEN I am prompted to enter the team manager’s name, employee ID, email address, and office number
+* WHEN I click on the Save icon THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
 
-* WHEN I enter the team manager’s name, employee ID, email address, and office number THEN I am presented with a menu with the option to add an engineer or an intern or to finish building my team
+* WHEN I click on an existing note in the list in the left-hand column THEN that note appears in the right-hand column
 
-* WHEN I select the engineer option THEN I am prompted to enter the engineer’s name, ID, email, and GitHub username, and I am taken back to the menu
-
-* WHEN I select the intern option THEN I am prompted to enter the intern’s name, ID, email, and school, and I am taken back to the menu
-
-* WHEN I decide to finish building my team THEN I exit the application, and the HTML is generated
+* WHEN I click on the Write icon in the navigation at the top of the page THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 
 ## Bonus
 
-* 🏆 WHEN I start the application THEN I have to enter my Teams name which will be the individual header of the webpage
-
-* 🏆 WHEN I start the application THEN I am presented with a welcome message
+* 🏆 WHEN I press the 🗑️-Button then the note is deleted from the webpage and the database
 
 ## Mock-Up
 
-🎥 The video shows the usage of the code in the terminal to generate a new Team Profile html page:
+🎥 The GIF shows the Landing page and the note page where the user is able to save and delete notes:
 
 ![Code-Demo](./assets/note.gif)
 
 ## Credits
 
-* https://www.npmjs.com/package/inquirer
-* https://www.voidcanvas.com/make-console-log-output-colorful-and-stylish-in-browser-node/
-* https://jestjs.io/docs/expect#tomatchobjectobject
+* https://ezgif.com/crop/ezgif-3-e35ddab000ce.gif
+* https://github.com/tchapi/markdown-cheatsheet/blob/master/README.md
+* https://devcenter.heroku.com/articles/git
+* https://www.youtube.com/watch?v=L72fhGm1tfE&t=811s
+* https://openclassrooms.com/en/courses/5614116-go-full-stack-with-node-js-express-and-mongodb/5656256-complete-the-crud-with-update-and-delete
+* https://channel9.msdn.com/Series/Beginners-Series-to-NodeJS/How-to-create-update-and-delete-APIs-with-Nodejs-and-Express-21-of-26
+
 
 © 2021 Zahra Mertens, Note-Taker
