@@ -12,7 +12,7 @@ notesRouter.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-//Post Route to add tip to json file and append to notes.html
+//Post Route to add note to json file and append to notes.html
 notesRouter.post('/', (req, res) => {
     // console.log(req.body)
     const {title, text} = req.body;
