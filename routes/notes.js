@@ -4,15 +4,15 @@ const {
     readFromFile,
     readAndAppend,
     writeToFile
- } = require("../helpers/fsUtils.js");
+} = require("../helpers/fsUtils.js"); //Get helper functions from helpers/fsUtils.js to access file system
 
  
-// GET Route for retrieving all the notesRouter
+// GET Route for retrieving all the notes from json file
 notesRouter.get('/', (req, res) => {
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
-//Add note
+//Post Route to add tip to json file and append to notes.html
 notesRouter.post('/', (req, res) => {
     // console.log(req.body)
     const {title, text} = req.body;
