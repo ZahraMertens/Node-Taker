@@ -1,14 +1,12 @@
 # Node-Taker
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Contributor](https://img.shields.io/badge/Contributor-1-green.svg) ![Nodejs](https://img.shields.io/badge/AppWith-NodeJS-red.svg) ![JavaScript](https://img.shields.io/badge/AppWith-JavaScript-red.svg) ![Framework](https://img.shields.io/badge/Framework-Bootstrap-purple.svg) ![Npm](https://img.shields.io/badge/npm-jest-blue.svg) ![Npm](https://img.shields.io/badge/npm-inquirer-blue.svg)
-
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) ![Contributor](https://img.shields.io/badge/Contributor-1-green.svg) ![Nodejs](https://img.shields.io/badge/AppWith-NodeJS-red.svg) ![JavaScript](https://img.shields.io/badge/AppWith-ExpressJS-green.svg) ![Framework]
 
 
 ## General Information
-
-* [🎥 Walkthrough Video of Application with Google Drive](https://drive.google.com/file/d/16WeGlBU4AyHxdRtSsZPWI94JhTj-ZwAK/view?usp=sharing)
-* [🐱 URL of the GitHub Repo](https://github.com/ZahraMertens/Team-Profile-Gen.git)
-* [👀 Demo deployed Team-Profile page](https://zahramertens.github.io/Team-Profile-Gen/)
+ 
+* [Deployed Web Application](https://note-takeer.herokuapp.com/)
+* [GitHub repository of Note-Taker](https://github.com/ZahraMertens/Node-Taker)
 
 
 ## Table of Contents
@@ -98,15 +96,7 @@ AS A manager, I WANT to generate a webpage that displays my team's basic info SO
 
 🎥 The video shows the usage of the code in the terminal to generate a new Team Profile html page:
 
-![Code-Demo](./GIFfolder/prompt.gif)
-
-🎥 The video shows an example of team profile html page generated with the node.js application and its features:
-
-![Deployed-HTML-Demo](./GIFfolder/page.gif)
-
-🎥 The video shows that all tests are passing when "npm run test" is entered:
-
-![Test-Demo](./GIFfolder/npmtest.gif)
+![Code-Demo](./assets/note.gif)
 
 ## Credits
 
@@ -114,4 +104,4 @@ AS A manager, I WANT to generate a webpage that displays my team's basic info SO
 * https://www.voidcanvas.com/make-console-log-output-colorful-and-stylish-in-browser-node/
 * https://jestjs.io/docs/expect#tomatchobjectobject
 
-© 2021 Zahra Mertens, Team Profile Generator.
+© 2021 Zahra Mertens, Note-Taker
